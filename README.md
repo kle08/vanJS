@@ -1,2 +1,2 @@
 # Vanilla JS
-Examples/challenges to brush up on vanilla JS
+Examples/challenges to brush up on vanilla JS 
