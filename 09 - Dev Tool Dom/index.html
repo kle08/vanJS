@@ -20,29 +20,60 @@
     }
 
     // Regular
+    console.log('hello')
 
     // Interpolated
+    console.log('hello i am a %s string!', '😧');
 
     // Styled
+    console.log('%c The text is awsome', 'font-size: 50px; background:red;');
 
     // warning!
+    console.warn('OH NOOOOO');
 
     // Error :|
+    console.error('OH NOOOOO');
 
     // Info
+    console.info(' crocs loves to wear crocs')
 
     // Testing
+    const p = document.querySelector('p');
+    // console.assert(p.classList.contains('ouch'), 'that is wrong man!'); 
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    console.log(p)
+    console.dir(p);
+
+    console.clear();
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.groupEnd(`${dog.name}`);
 
+    })
     // counting
+    console.count('kevin');
+    console.count('kevin');
+    console.count('kevin');
+    console.count('kevin');
+    console.count('kevin');
+    console.count('john');
 
     // timing
-
+    console.time('fetching data');
+    fetch('https://api.github.com/user/kle08')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
   </script>
 </body>
 
