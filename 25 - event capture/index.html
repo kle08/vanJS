@@ -46,8 +46,29 @@
 
   <button></button>
   <script>
+    const divs = document.querySelectorAll('div');
+    function logText(e) {
+      console.log(this.classList.value);
+      // stop bubbling - no domino effect
+      e.stopPropagation();
+      // console.log(this)
+    }
+    divs.forEach(div => div.addEventListener('click', logText, {
+      capture: false,
+      once: true
+    }));
 
+    button.addEventListener('click', () => {
+      console.log('click me')
+    }, {
+        once: true
+      })
   </script>
 </body>
 
 </html>
+
+<!-- bubbling where the brozer will see where you click on and it will cause a domino effect  
+capture to ripple down for all the event 
+
+-->
